@@ -1,19 +1,17 @@
-#displayQuestions(String name, Scanner input, ArrayList<String> itemsBought, ArrayList<Integer> itemsNo, ArrayList<Double> itemPrice)
-
 def display_questions(name, items_bought, items_number, items_price):
     if type(name) is not str or type(items_bought) is not list or type(items_number) is not list or type(items_price) is not list:
         raise TypeError("inavlid input")
         
-    item_name = input("what did the user buy\n> ")
+    item_name = input("what did the user buy\n ")
     items_bought.append(item_name)
     
-    item_amount = int(input("How many peices\n> "))
+    item_amount = int(input("How many peices\n "))
     items_number.append(item_amount)
     
-    price = float(input("how much per unit\n> "))
+    price = float(input("how much per unit\n "))
     items_price.append(price)
     
-    options = input("add more items?\n> ")
+    options = input("add more items?\n ")
     if options.lower() == "yes":
         display_question_again(name, items_bought, items_number, items_price)
     else:
