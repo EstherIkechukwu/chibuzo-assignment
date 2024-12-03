@@ -1,34 +1,6 @@
 import java.util.Scanner;
 public class StudentGrade{
-	
-public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, int[][] scoresOfStudents){
-	System.out.println("====================================================================");
-	System.out.print("STUDENT\t\t ");
-		for(int counter = 1; counter <= numberOfSubjects; counter++){  
-			System.out.print("SUB" +counter+ "\t" );
-		}		
-	System.out.println("TOT\tAVE\tPOS\t");
-	System.out.println("====================================================================");
-	int total = 0;
-	for(int count = 1; count <= numberOfStudent; count++){
-		System.out.print("Student" +count+ "\t");
-		for(int numbers = 1; numbers <= numberOfSubjects; numbers++){
-			System.out.print(scoresOfStudents[count - 1][numbers -1] + "\t");
-			total += scoresOfStudents[count -1][numbers -1];	
-		}
-		
-		System.out.print(total + "\t");
-		double average = total / numberOfSubjects;
-		System.out.printf("%.2f\t", average);
-		
-		System.out.println("");
-	}	
-	System.out.println("====================================================================");
-	System.out.println();
-	System.out.println("====================================================================");
-
-
-public static void main(String... args){
+	public static void main(String... args){
 	Scanner input = new Scanner(System.in);
 
 	int failures = 0;
@@ -60,13 +32,41 @@ public static void main(String... args){
 	printScoreBoard(numberOfStudent, numberOfSubjects, scoresOfStudents);
 }
 
+	
+public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, int[][] scoresOfStudents){
+	System.out.println("====================================================================");
+	System.out.print("STUDENT\t\t ");
+		for(int counter = 1; counter <= numberOfSubjects; counter++){  
+			System.out.print("SUB" +counter+ "\t" );
+		}		
+	System.out.println("TOT\tAVE\tPOS\t");
+	System.out.println("====================================================================");
+	int total = 0;
+	for(int count = 1; count <= numberOfStudent; count++){
+		System.out.print("Student" +count+ "\t");
+		for(int numbers = 1; numbers <= numberOfSubjects; numbers++){
+			System.out.print(scoresOfStudents[count - 1][numbers -1] + "\t");
+			total += scoresOfStudents[count -1][numbers -1];	
+		}
+		
+		System.out.print(total + "\t");
+		double average = total / numberOfSubjects;
+		System.out.printf("%.2f\t", average);
+		
+		System.out.println("");
+	}	
+	System.out.println("====================================================================");
+	System.out.println();
+	System.out.println("====================================================================");
 
+}
 
-public static void printSubjectSummary(int numberOfSubjects, int[][] scoresOfStudents) {
+public static void printSubjectSummary(int numberOfSubjects, int numberOfStudent, int[][] scoresOfStudents) {
 	System.out.print("SUBJECT SUMMARY");
 	int cutOffMark = 50;
+	int averageScore;
 
-		for(index = 0; index < numberOfSubjects; index++){
+		for(int index = 0; index < numberOfSubjects; index++){
 			scoresOfStudents[index].sort();
 		int highestScore = index[-1];
 		int lowestScore = index[0];
@@ -74,10 +74,24 @@ public static void printSubjectSummary(int numberOfSubjects, int[][] scoresOfStu
 
 	System.out.printf("The Highest scoring student is: %d", highestScore);
 	System.out.printf("The Lowest scoring student is: %d", lowestScore);
-	System.out.printf("The Total score is: %d", total);
-	System.out.printf("The average score is: %s", average);
-	System.out.printf("The Number of passes: %d", passes);
-	System.out.printf("The Number of fails: %d", failures);
+
+	int[] totalScore = new int[numberOfStudent];
+	for(int number = 0; number < scoresOfStudent; number++){
+		int sum = 0;
+		sum += number;
+		totalScore.append(sum);
+		totalScore.sort();
+	return int[] totalScore;
+
+	int highestScore = index[-1];
+	int lowestScore = index[0];
+
+	averageScore = totalScore[number] / numberOfSubjects;
+
+	}
+	System.out.printf("The Total score is: %d", totalScore);
+	System.out.printf("The average score is: %s", averageScore);
+	
 }
 
 //public static String printGradeSummary(){
