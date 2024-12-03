@@ -50,7 +50,7 @@ public static void main(String... args){
 	for(int index = 1; index <= numberOfStudent; index++){
 		for(int number = 1; number < numberOfSubjects; number++){
 			System.out.println("Entering score for student " + index);
-			System.out.print("Enter score for subject " + number+ " : ");
+			System.out.print("Enter score for subject " +number+ " : ");
 			scoresOfStudents [index - 1][number -1] = input.nextInt();
 			System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 			System.out.println("Saved successfully.");
@@ -61,22 +61,23 @@ public static void main(String... args){
 }
 
 
-public static void printSubjectSummary() {
+
+public static void printSubjectSummary(int numberOfSubjects, int[][] scoresOfStudents) {
 	System.out.print("SUBJECT SUMMARY");
 	int cutOffMark = 50;
 
 		for(index = 0; index < numberOfSubjects; index++){
-	
-		int highestScore = 
-		int lowestScore = 
-	
+			scoresOfStudents[index].sort();
+		int highestScore = index[-1];
+		int lowestScore = index[0];
 		}
-	System.out.printf("The Highest scoring student is: %d scoring %d");
-	System.out.printf("The Lowest scoring student is: %d scoring %d");
-	System.out.printf("The Total score is: %d");
-	System.out.printf("The average score is: %s");
-	System.out.printf("The Number of passes: %d");
-	System.out.printf("The Number of fails: %d");
+
+	System.out.printf("The Highest scoring student is: %d", highestScore);
+	System.out.printf("The Lowest scoring student is: %d", lowestScore);
+	System.out.printf("The Total score is: %d", total);
+	System.out.printf("The average score is: %s", average);
+	System.out.printf("The Number of passes: %d", passes);
+	System.out.printf("The Number of fails: %d", failures);
 }
 
 //public static String printGradeSummary(){
