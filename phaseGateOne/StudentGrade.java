@@ -23,35 +23,47 @@ public class StudentGrade{
 		for(int number = 1; number < numberOfSubjects; number++){
 			System.out.println("Entering score for student " + index);
 			System.out.print("Enter score for subject " + number+ " : ");
-
+			scoresOfStudents [index - 1][number -1] = input.nextInt();
 			System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 			System.out.println("Saved successfully!");
 			System.out.println();
 		}
 	}
-	printScoreBoard(numberOfStudent, numberOfSubjects);
+	printScoreBoard(numberOfStudent, numberOfSubjects, scoresOfStudents );
 }
 
 
-public static void printScoreBoard(int numberOfStudent, int numberOfSubjects){
-	System.out.println("========================================================");
-	System.out.print("STUDENT\t\t");
+public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, int[][] scoresOfStudents){
+	System.out.println("====================================================================");
+	System.out.print("STUDENT\t\t ");
 		for(int counter = 1; counter <= numberOfSubjects; counter++){  
-			System.out.print("SUB"+ counter + "\t");
+			System.out.print("SUB" +counter+ "\t" );
 		}		
-	System.out.println("TOTAL");
-
-	System.out.println("========================================================");
+	System.out.println("TOT\tAVE\tPOS\t");
+	System.out.println("====================================================================");
+	int total = 0;
 	for(int count = 1; count <= numberOfStudent; count++){
+		System.out.print("Student" +count+ "\t");
+		for(int countTwo = 1; countTwo <= numberOfSubjects; countTwo++){
+			System.out.print(scoresOfStudents[count - 1][countTwo -1 ] + "\t" );
+			total += scoresOfStudents[count -1][countTwo -1];		 	}
+		
+		System.out.print(total + "\t");
+		double average = total / numberOfSubjects;
+		System.out.printf("%.2f\t", average);
+		
 		System.out.println("");
-		System.out.println("");
+	}	
+	System.out.println("====================================================================");
+	System.out.println();
+	System.out.println("====================================================================");
 
-	}
+
+
+
 }
-
-
 //public static int printAverage(int scoreOfStudents){
-
+	//int average = total / numberOfStudent;
 
 
 
