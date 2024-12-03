@@ -14,7 +14,7 @@ public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, in
 		System.out.print("Student" +count+ "\t");
 		for(int numbers = 1; numbers <= numberOfSubjects; numbers++){
 			System.out.print(scoresOfStudents[count - 1][numbers -1] + "\t");
-			total += scoresOfStudents[count -1][numbers -1];		 	
+			total += scoresOfStudents[count -1][numbers -1];	
 		}
 		
 		System.out.print(total + "\t");
@@ -61,13 +61,26 @@ public static void main(String... args){
 }
 
 
+public static void printSubjectSummary() {
+	System.out.print("SUBJECT SUMMARY");
+	int cutOffMark = 50;
+
+		for(index = 0; index < numberOfSubjects; index++){
+	
+		int highestScore = 
+		int lowestScore = 
+	
+		}
+	System.out.printf("The Highest scoring student is: %d scoring %d");
+	System.out.printf("The Lowest scoring student is: %d scoring %d");
+	System.out.printf("The Total score is: %d");
+	System.out.printf("The average score is: %s");
+	System.out.printf("The Number of passes: %d");
+	System.out.printf("The Number of fails: %d");
+}
+
 //public static String printGradeSummary(){
-	//System.out.printf(" The Highest scoring student is: ");
-	//System.out.printf(" The Lowest scoring student is: ");
-	//System.out.printf(" The Total score is: ");
-	//System.out.printf(" The average score is: ");
-	//System.out.printf(" The Number of passes: ");
-	//System.out.printf(" The Number of fails: ");
+	
 
 //}
 
