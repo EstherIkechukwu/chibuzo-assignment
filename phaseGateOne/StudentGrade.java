@@ -1,6 +1,34 @@
 import java.util.Scanner;
 public class StudentGrade{
-	public static void main(String... args){
+	
+public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, int[][] scoresOfStudents){
+	System.out.println("====================================================================");
+	System.out.print("STUDENT\t\t ");
+		for(int counter = 1; counter <= numberOfSubjects; counter++){  
+			System.out.print("SUB" +counter+ "\t" );
+		}		
+	System.out.println("TOT\tAVE\tPOS\t");
+	System.out.println("====================================================================");
+	int total = 0;
+	for(int count = 1; count <= numberOfStudent; count++){
+		System.out.print("Student" +count+ "\t");
+		for(int numbers = 1; numbers <= numberOfSubjects; numbers++){
+			System.out.print(scoresOfStudents[count - 1][numbers -1] + "\t");
+			total += scoresOfStudents[count -1][numbers -1];		 	
+		}
+		
+		System.out.print(total + "\t");
+		double average = total / numberOfSubjects;
+		System.out.printf("%.2f\t", average);
+		
+		System.out.println("");
+	}	
+	System.out.println("====================================================================");
+	System.out.println();
+	System.out.println("====================================================================");
+
+
+public static void main(String... args){
 	Scanner input = new Scanner(System.in);
 
 	int failures = 0;
@@ -15,7 +43,7 @@ public class StudentGrade{
 	int numberOfSubjects = input.nextInt();
 
 	System.out.print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-	System.out.println("Saved Successfully");
+	System.out.println("Saved Successfully.");
 	System.out.println();
 
 	int[][] scoresOfStudents = new int[numberOfStudent][numberOfSubjects];
@@ -25,49 +53,13 @@ public class StudentGrade{
 			System.out.print("Enter score for subject " + number+ " : ");
 			scoresOfStudents [index - 1][number -1] = input.nextInt();
 			System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-			System.out.println("Saved successfully!");
+			System.out.println("Saved successfully.");
 			System.out.println();
 		}
 	}
-	printScoreBoard(numberOfStudent, numberOfSubjects, scoresOfStudents );
+	printScoreBoard(numberOfStudent, numberOfSubjects, scoresOfStudents);
 }
 
-
-public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, int[][] scoresOfStudents){
-	System.out.println("====================================================================");
-	System.out.print("STUDENT\t\t ");
-		for(int counter = 1; counter <= numberOfSubjects; counter++){  
-			System.out.print("SUB" +counter+ "\t" );
-		}		
-	System.out.println("TOT\tAVE\tPOS\t");
-	System.out.println("====================================================================");
-	int total = 0;
-	for(int count = 1; count <= numberOfStudent; count++){
-		System.out.print("Student" +count+ "\t");
-		for(int countTwo = 1; countTwo <= numberOfSubjects; countTwo++){
-			System.out.print(scoresOfStudents[count - 1][countTwo -1 ] + "\t" );
-			total += scoresOfStudents[count -1][countTwo -1];		 	}
-		
-		System.out.print(total + "\t");
-		double average = total / numberOfSubjects;
-		System.out.printf("%.2f\t", average);
-		
-		System.out.println("");
-	}	
-	System.out.println("====================================================================");
-	System.out.println();
-	System.out.println("====================================================================");
-
-
-
-
-}
-//public static int printAverage(int scoreOfStudents){
-	//int average = total / numberOfStudent;
-
-
-
-//}
 
 //public static String printGradeSummary(){
 	//System.out.printf(" The Highest scoring student is: ");
