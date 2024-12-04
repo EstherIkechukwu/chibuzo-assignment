@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class StudentGrade{
 	public static void main(String... args){
 	Scanner input = new Scanner(System.in);
@@ -52,7 +53,6 @@ public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, in
 		System.out.print(total + "\t");
 		double average = total / numberOfSubjects;
 		System.out.printf("%.2f\t", average);
-		
 		System.out.println("");
 	}	
 	System.out.println("====================================================================");
@@ -61,30 +61,39 @@ public static void printScoreBoard(int numberOfStudent, int numberOfSubjects, in
 
 }
 
-public static void printSubjectSummary(int numberOfSubjects, int numberOfStudent, int[][] scoresOfStudents) {
-	System.out.print("SUBJECT SUMMARY");
-	int cutOffMark = 50;
-	int averageScore;
 
-		for(int index = 0; index < numberOfSubjects; index++){
-			scoresOfStudents[index].sort();
+
+public static void printPosition(int total, int totalScore){
+	
+
+
+
+}
+
+public static void printSubjectSummary(int numberOfSubjects, int numberOfStudent, int[][] scoresOfStudents){
+	System.out.print("SUBJECT SUMMARY");
+	double averageScore;
+	int[] totalScore = new int[numberOfStudent];
+	int[] position = new int[numberOfStudent];
+
+	for(int index = 0; index <= scoresOfStudents.length ; index++){
+		Arrays.sort(scoresOfStudents[index]);
 		int highestScore = index[-1];
 		int lowestScore = index[0];
-		}
 
 	System.out.printf("The Highest scoring student is: %d", highestScore);
 	System.out.printf("The Lowest scoring student is: %d", lowestScore);
+	}
 
-	int[] totalScore = new int[numberOfStudent];
-	for(int number = 0; number < scoresOfStudent; number++){
+	for(int number = 0; number < scoresOfStudents; number++){
 		int sum = 0;
 		sum += number;
 		totalScore.append(sum);
-		totalScore.sort();
-	return int[] totalScore;
+		Arrays.sort(totalScore);
+	return totalScore;
 
-	int highestScore = index[-1];
-	int lowestScore = index[0];
+	int highestScore = number[-1];
+	int lowestScore = number[0];
 
 	averageScore = totalScore[number] / numberOfSubjects;
 
