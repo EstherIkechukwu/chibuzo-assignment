@@ -1,0 +1,79 @@
+pseudo code phonebookApplication:
+
+- display the phonebook menu options.
+- prompt the user to select an option, collect the result.
+- store as "menu"
+- create a arraylist that stores first names
+- create a arraylist that stores last names
+- create a arraylist that stores phone numbers
+- create a arraylist that stores email addresses
+
+
+- Create a function that can add contact.
+- prompt the user to enter first name, save as "firstName"
+- add to the arraylist that stores first names
+
+- prompt the user to enter last name, save as "lastName"
+- add to the arraylist that stores last names.
+
+- prompt the user to enter phone number, save as "phoneNumber"
+- add to the arraylist that stores phone numbers.
+
+- prompt the user to enter email address, save as "email"
+- add to the arraylist that stores email addresses.
+
+- Display "contact saved"
+
+
+- Create a function that can remove contact.
+- prompt the user to enter the name they want to remove
+- collect it and store as "name"
+- check if "name" in the arraylist that stores first names
+- check for the index in all the arrayLists and remove at index 0
+- display "contact deleted...."
+- else display the contact does not exist.
+
+
+- create a  function to find contact by phone number.
+- prompt the user to enter the number you want to find
+- collect it and save as "number"
+- check if "number" in arraylist that stores "phoneNumbers"
+- display the firstName, lastName, PhoneNumber, and Email address.
+- else display "contact does not exist"
+
+
+- create a function to find contact by first name.
+- prompt the user to enter the first name of the person you want find
+- collect it and save as "first"
+- check if "first" in arraylist that stores "first_names"
+- display the firstName, lastName, PhoneNumber, and Email address.
+- else display "contact does not exist"
+
+
+- create a function to find contact by last name.
+- prompt the user to enter the last name of the person you want find
+- collect it and save as "last"
+- check if "last" in arraylist that stores "last_names"
+- display the firstName, lastName, PhoneNumber, and Email address.
+- else display "contact does not exist"
+
+- create a function to edit contact.
+- prompt the user to enter the name they would like to edit
+- collect it and save as "editName"
+- check if "editName" is in the arraylist that stores "first names"
+- prompt the user to enter new first name
+- collect it and stores as "newFirstName"
+- prompt the user to enter new last name
+- collect it and stores as "newLastName"
+- prompt the user to enter new phone number
+- collect it and stores as "newContact"
+- prompt the user to enter new email address
+- collect it and store as "newEmailAddress"
+- else display "contact does not exist"
+
+
+
+
+
+
+
