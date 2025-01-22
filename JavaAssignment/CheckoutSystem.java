@@ -62,6 +62,7 @@ DATE: 18TH-DEC-22 7:25pm
 				System.out.printf("%s\t%d\t%.2f\t%.2f%n", product.get(index), itemsNumber.get(index), itemPrice.get(index), (itemsNumber.get(index) * itemPrice.get(index)));
 			}
 
+	
 	}
 
 

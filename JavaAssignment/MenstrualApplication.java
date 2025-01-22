@@ -13,7 +13,7 @@ public class MenstrualApplication{
 		System.out.print("What is your name?");
 		name = input.nextLine();
 
-		System.out.print("Enter the first date of your last menstrual cycle: ");
+		System.out.print("Enter the first day of your last menstrual cycle: ");
 		recentMenstrualDate = input.nextInt();
 
 		System.out.print("Enter the month of your last menstrual cycle: ");
@@ -30,9 +30,9 @@ public class MenstrualApplication{
 	while(!printCorrectDate(recentMenstrualDate, lastMenstrualMonth, lastMenstrualYear));
 
 	System.out.printf("Hello %s, Welcome to MyFlowApp, Here is the summary of your Menstrual cycle:  ", name);
-	System.out.println("Your Period flow dates ( 5 Days)");
+	System.out.println("Your Period flow lasts for 5 Days");
 	int currentDate = recentMenstrualDate;
-	int currentMonth = lastMenstrualMonth;
+	int currentMonth = lastMenstrualMonth; 
 	int currentYear = lastMenstrualYear;
 
 	for(int number = 0; number < 5; number++){
@@ -55,7 +55,7 @@ public class MenstrualApplication{
 	int[] nextPeriod = addToDays(currentDate, currentMonth, currentYear, 28 + (int)(Math.random() * 3));
 	
 	System.out.print("Your Next period will be on .......");
-	System.out.printf("Perdicted Date: %02d-%02d-%d\n", nextPeriod[0], nextPeriod[1], nextPeriod[2]);
+	System.out.printf("Predicted Date: %02d-%02d-%d\n", nextPeriod[0], nextPeriod[1], nextPeriod[2]);
 	
 
 }
