@@ -7,11 +7,7 @@ public class CreditCardValidator{
 	System.out.print("Welcome to Estee's credit card Validator, Kindly Enter your card details to verify: ");
 	String cardNumber = input.next();
 
-
-
-		checkCardValidity(cardNumber);
 		checkCardCategory(cardNumber);
-		calculateSecondDigitRightToLeft(cardNumber);
 		addSingleDigitRightToLeft(cardNumber);
 		addStep2AndStep3(cardNumber);
 		getValidity(cardNumber);
@@ -20,7 +16,7 @@ public class CreditCardValidator{
 
 public static boolean checkCardValidity(String cardNumber) {
 
-		if(cardNumber.length() < 13 || cardNumber.length() > 16){
+		if(cardNumber.length() > 13 || cardNumber.length() <= 16){
 			return true;
 		}
 		return false;
@@ -50,10 +46,10 @@ public static String checkCardCategory(String cardNumber){
 
 public static double calculateSecondDigitRightToLeft(String cardNumber){
 	double total = 0;
-	for(int index = cardNumber.length()-2; index >= 0; index-=2){
-		int number = Integer.valueOf(String.valueOf(cardNumber.charAt(index)));
+	for(int index = cardNumber.length()-1; index > 0 ; index-=2){
+		int number = Integer.valueOf(cardNumber.charAt(index));
 			number = number * 2;
-			if(number >= 9){
+			if(number > 9){
 				number = number/10 + number%10;
 					total += number;
 			}
@@ -65,7 +61,7 @@ public static double calculateSecondDigitRightToLeft(String cardNumber){
 public static double addSingleDigitRightToLeft(String cardNumber){
 	double tot = 0;
 	for(int index = cardNumber.length()-1; index >= 0; index-=2){
-		int number = Integer.valueOf(String.valueOf(cardNumber.charAt(index)));
+		int number = Integer.valueOf(cardNumber.charAt(index));
 			tot += number;
 		}
 		return tot;
@@ -115,6 +111,7 @@ else {
 	status = getValidity(cardNumber);
         System.out.println("**Credit Card Validity Status: " + status);
         System.out.println("*****************************************");
+
             
 }
 

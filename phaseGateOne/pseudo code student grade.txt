@@ -1,0 +1,20 @@
+pseudo  code: student grade:
+
+- prompt the user to enter the number of students
+- collect the result
+- Store as "numberOfStudents"
+
+- prompt the user to enter the number of subjects
+- collect the result
+- store as "numberOfSubjects"
+
+- collect the score of every student and every subject in an array
+- using for loop , loop through "numberOfStudents"
+- add another for loop inside it, that will loop through "numberOfSubjects"
+
+- calculate the average score
+- calculate the total
+
+- scores should be in the range of 0, 100
+- display the class summary
+

@@ -50,15 +50,15 @@ number_of_subjects = int(input("How many subjects do they offer? "))
 
 
 
-//public static void printSubjectSummary() {
-	int highestScore =
-	int lowestScore = 
-	//System.out.printf(" The Highest scoring student is: %d scoring %d");
-	//System.out.printf(" The Lowest scoring student is: %d scoring %d");
-	//System.out.printf(" The Total score is: %d");
-	//System.out.printf(" The average score is: %s");
-	//System.out.printf(" The Number of passes: %d");
-	//System.out.printf(" The Number of fails: %d");
+def get_subject_summary():
+	highestScore =
+	lowestScore = 
+	printf(" The Highest scoring student is: %d scoring %d");
+	printf(" The Lowest scoring student is: %d scoring %d");
+	printf(" The Total score is: %d");
+	printf(" The average score is: %s");
+	printf(" The Number of passes: %d");
+	printf(" The Number of fails: %d");
 
 
 }
